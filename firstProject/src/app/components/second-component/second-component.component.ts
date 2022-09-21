@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-second-component',
@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecondComponentComponent implements OnInit {
   idades: number[] = [0,1,2,3,4,5];
+  @Input() name: string = "";
+  flag: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  showMessage(): void{
+    this.flag = !this.flag;
   }
 
 }
