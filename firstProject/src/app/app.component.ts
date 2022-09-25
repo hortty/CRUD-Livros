@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,7 +7,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nameComponent: string = "teste2";
+  
+  constructor(private http: HttpClient) {
 
-  title = 'firstproj';
+  }
+
+  getFunction() {
+    this.http.get("https://jsonplaceholder.typicode.com/posts", {}).subscribe((resposta: any)=> {
+      alert(JSON.stringify(resposta));
+    });
+  }
+
+  postFunction() {
+    this.http.post("https://jsonplaceholder.typicode.com/posts", {}).subscribe(
+      (resposta: any)=> {
+      alert(JSON.stringify(resposta));
+    },
+    (error: any) => {
+      alert(JSON.stringify(error));
+    });
+  }
+
 }

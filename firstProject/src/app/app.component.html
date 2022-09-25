@@ -1,8 +1,22 @@
-<app-header-component></app-header-component>
-<app-first-component></app-first-component>
-<app-first-component></app-first-component>
-<app-first-component></app-first-component>
-<app-second-component [name] = "nameComponent"></app-second-component>
+<header>
+    <div class="grid">
+        <nav>
+          <ul class="nav-list">
+            <li><a href="#about">HOME</a></li>
+            <li><a href="#offer">OFFER</a></li>
+            <li><a href="#projects">SHOP</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+    <app-livros></app-livros>
+<button (click)="getFunction()">Get!</button>
+<button (click)="postFunction()">Post!</button>
+    </main>
+<footer>
+  <p>Footer</p>
+</footer>
 <!-- sudo npm install -g @angular/cli -->
 <!-- ng new project_name -->
 <!-- ng s -o -->

@@ -1,24 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstComponentComponent } from './components/first-component/first-component.component';
-import { SecondComponentComponent } from './components/second-component/second-component.component';
-import { HeaderComponentComponent } from './components/header-component/header-component.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LivrosService } from './services/livros.service';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LivrosComponent } from './components/livros/livros.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponentComponent,
-    SecondComponentComponent,
-    HeaderComponentComponent
+    LivrosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    CommonModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [HttpClientModule, LivrosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
