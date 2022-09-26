@@ -1,0 +1,38 @@
+{
+  "productList": [
+    {
+      "titulo_produto": "Harry Potter",
+      "descricao_produto": "HP book",
+      "preco_produto": 90,
+      "id": 3
+    },
+    {
+      "titulo_produto": "A metamorfose",
+      "descricao_produto": "barata",
+      "preco_produto": 1,
+      "id": 4
+    },
+    {
+      "titulo_produto": "o estrangeiro",
+      "descricao_produto": "albert camus",
+      "preco_produto": 20,
+      "id": 5
+    },
+    {
+      "titulo_produto": "It",
+      "descricao_produto": "Stephen King",
+      "preco_produto": 200,
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

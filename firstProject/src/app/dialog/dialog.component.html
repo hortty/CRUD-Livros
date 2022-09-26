@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Livro: </h1>
+<div mat-dialog-content>
+  <form [formGroup]="formulario_produto">
+    <mat-form-field appearance="fill">
+      <mat-label>Título</mat-label>
+      <input formControlName="titulo_produto" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="descricao">
+      <mat-label>Descrição</mat-label>
+      <textarea formControlName="descricao_produto" matInput></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="price">
+      <mat-label>Preço</mat-label>
+      <input formControlName="preco_produto" matInput type="number">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="primary" (click)="adicionarProduto()">Save</button>
+</div>

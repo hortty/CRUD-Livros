@@ -1,0 +1,32 @@
+.mat-elevation-z8 {
+  max-width: 1600px;
+  margin: 80px 5px 5px 100px;
+  width: 100%;
+}
+
+table{
+  width: 100%;
+}
+
+.addbook {
+  margin: 30px 100px;
+}
+
+mat-toolbar {
+  padding: 50px;
+  border: 3px solid black;
+}
+
+#book_market {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 2em;
+  margin-left: 20px;
+}
+
+.mat-icon {
+  transform: scale(3);
+}
+
+button:hover {
+  background-color: cornflowerblue;
+}

@@ -1,24 +1,47 @@
-<header>
-    <div class="grid">
-        <nav>
-          <ul class="nav-list">
-            <li><a href="#about">HOME</a></li>
-            <li><a href="#offer">OFFER</a></li>
-            <li><a href="#projects">SHOP</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
-    <app-livros></app-livros>
-<button (click)="getFunction()">Get!</button>
-<button (click)="postFunction()">Post!</button>
-    </main>
-<footer>
-  <p>Footer</p>
-</footer>
-<!-- sudo npm install -g @angular/cli -->
-<!-- ng new project_name -->
-<!-- ng s -o -->
-<!-- ng serve -->
-<!-- ng generate component components/component_name -->
+<mat-toolbar color="warn">
+  <div class="titulo">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>shop_two</mat-icon>
+  </button>
+  <span id="book_market">Book Market</span>
+</div>
+</mat-toolbar>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let livro"> {{livro.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="titulo_produto">
+      <th mat-header-cell *matHeaderCellDef> Título </th>
+      <td mat-cell *matCellDef="let livro"> {{livro.titulo_produto}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="descricao_produto">
+      <th mat-header-cell *matHeaderCellDef> Descrição </th>
+      <td mat-cell *matCellDef="let livro"> {{livro.descricao_produto}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="preco_produto">
+      <th mat-header-cell *matHeaderCellDef> Preço </th>
+      <td mat-cell *matCellDef="let livro"> {{livro.preco_produto}} </td>
+    </ng-container>
+    <ng-container matColumnDef="acao">
+      <th mat-header-cell *matHeaderCellDef> Ação </th>
+      <td mat-cell *matCellDef="let livro">
+        <button mat-raised-button color="warn" (click)="editarProduto(livro)">editar</button>
+        <button style="margin-left: 3px;" mat-raised-button color="warn" (click)="deletarProduto(livro.id)">remover</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+<button class="addbook" mat-raised-button color="primary" (click)="abrirDialogo()">Adicionar Livro</button>
