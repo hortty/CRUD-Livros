@@ -1,2 +1,2 @@
 # CRUD-Livros
-Angular + .NET Core
+Angular with Json-server
