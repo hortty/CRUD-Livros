@@ -1,5 +1,5 @@
 # CRUD-Livros
-Angular with Json-server
+This is a project which you can create, retrieve, update and delete books registry. It was made using Angular with Json-server.
 
 
 See the project interface:
